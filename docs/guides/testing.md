@@ -33,7 +33,7 @@ There is an argument to be made that it is the inverse, but for brevity, we will
 
 In terms of tools, we have native capabilities in our ecosystem. We can write unit tests in a variety of languages.
 
-[rust](https://doc.rust-lang.org/rust-by-example/testing/unit_testing.html)
+[Rust](https://doc.rust-lang.org/rust-by-example/testing/unit_testing.html)
 
 ### Integration
 
@@ -52,18 +52,20 @@ Of course, a developer might mock this data depending on the approach, But ultim
 
 #### Integration: Substrate
 
-Substrate has its own [mock runtime](https://docs.substrate.io/v3/runtime/testing/). This runtime will help us with block production, genesis config.
+Substrate has its own [Mock Runtime](https://docs.substrate.io/v3/runtime/testing/). This runtime will help us with block production, genesis config.
 
 
 For development testing, a tool to help verify features:
 [Polkadot-JS](https://docs.substrate.io/v3/integration/polkadot-js/)
 
 We can also have a look here if we want to build our integration test suites in the future:
-[client libraries](https://docs.substrate.io/v3/integration/client-libraries/)
+[Client Libraries](https://docs.substrate.io/v3/integration/client-libraries/)
 
 ### End to End(E2E)
 
 E2E testing covers a business process; it could be something as significant as user login, creating a new game, or gameplay.
+
+Sometimes referred to as Black Box Testing, the test does not necessarily care about what happens at a granular level, just that what comes out is correct.
 
 It usually involves every end of the system, from the front to the back.
 
