@@ -8,6 +8,8 @@ permalink: /guides/security
 [ecryptfs]: https://www.ecryptfs.org/
 [luks]: https://wiki.archlinux.org/index.php/LUKS
 [gpg]: https://www.gnupg.org/
+[data-at-rest]: https://en.wikipedia.org/wiki/Data_at_rest
+[data-in-transit]: https://en.wikipedia.org/wiki/Data_in_transit
 
 # Security Guidelines
 
@@ -39,7 +41,7 @@ If any company asset is downloaded to a local machine, it should serve its purpo
 
 ### At rest
 
-Data at rest is data when it is not moving. Such as:
+[Data at rest][data-at-rest] is data when it is not moving. Such as:
 - stored on some device
 - on some cloud platform
 - in a database
@@ -58,7 +60,7 @@ Some great tools:
 
 ### In transit
 
-Data in transit is any time it is *moving* from one place to another.
+[Data in transit][data-in-transit] is any time data is *moving* from one place to another.
 
 Careful consideration should be taken about the data is sent across:
 - insecure networks, such as HTTP
