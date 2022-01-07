@@ -4,6 +4,11 @@ title: Testing
 permalink: /guides/testing
 ---
 
+[rust-unit-testing]: https://doc.rust-lang.org/rust-by-example/testing/unit_testing.html
+[substrate-testing]: https://docs.substrate.io/v3/runtime/testing/
+[polkadot-js]: https://docs.substrate.io/v3/integration/polkadot-js/
+[substrate-client-libraries]: https://docs.substrate.io/v3/integration/client-libraries/
+
 # Testing
 
 This guide expresses some general ideas about how we think about testing, both development, and product driven.
@@ -33,7 +38,7 @@ There is an argument to be made that it is the inverse, but for brevity, we will
 
 In terms of tools, we have native capabilities in our ecosystem. We can write unit tests in a variety of languages.
 
-[Rust](https://doc.rust-lang.org/rust-by-example/testing/unit_testing.html)
+[Unit testing in Rust][rust-unit-testing]
 
 ### Integration
 
@@ -52,14 +57,14 @@ Of course, a developer might mock this data depending on the approach, But ultim
 
 #### Integration: Substrate
 
-Substrate has its own [Mock Runtime](https://docs.substrate.io/v3/runtime/testing/). This runtime will help us with block production, genesis config.
+Substrate has its own [Mock Runtime][substrate-testing]. This runtime will help us with block production, genesis config.
 
 
 For development testing, a tool to help verify features:
-[Polkadot-JS](https://docs.substrate.io/v3/integration/polkadot-js/)
+[Polkadot-JS][polkadot-js]
 
 We can also have a look here if we want to build our integration test suites in the future:
-[Client Libraries](https://docs.substrate.io/v3/integration/client-libraries/)
+[Client Libraries][substrate-client-libraries]
 
 ### End to End(E2E)
 

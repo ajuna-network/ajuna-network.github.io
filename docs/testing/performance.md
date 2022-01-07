@@ -4,6 +4,15 @@ title: Performance Testing
 permalink: /guides/testing/performance
 ---
 
+[bench-crate]: https://crates.io/crates/bench
+[criterion-crate]: https://crates.io/crates/criterion
+[substrate-benchmarking]: https://docs.substrate.io/v3/runtime/benchmarking/
+[substrate-weight]: https://docs.substrate.io/v3/concepts/weight/
+[substrate-frame-benchmarking]: https://docs.substrate.io/rustdocs/latest/frame_benchmarking/macro.benchmarks.html
+[drill-tool]: https://github.com/fcsonline/drill
+[l99]: https://en.wikipedia.org/wiki/99_percentile
+[l95]: https://en.wikipedia.org/wiki/95_percentile
+
 # Performance testing
 
 This guide expresses some general ideas about how we think about the term performance testing.
@@ -37,15 +46,15 @@ This benchmarking is for complex, small units of the code base, such as:
 - hand-written algorithms
 - comparing algorithms
 
-Tools such as [bench](https://crates.io/crates/bench) and [criterion](https://crates.io/crates/criterion) are used to run unit benchmarks. With the latter being more sophisticated.
+Tools such as [bench][bench-crate] and [criterion][criterion-crate] are used to run unit benchmarks. With the latter being more sophisticated.
 
 ### Pallet Benchmarks
 
-Pallet benchmarking relates to [substrate benchmarking](https://docs.substrate.io/v3/runtime/benchmarking/) and answers our most important questions around [transaction weight](https://docs.substrate.io/v3/concepts/weight/). 
+Pallet benchmarking relates to [Substrate Benchmarking][substrate-benchmarking] and answers our most important questions around [Transaction Weight][substrate-weight]. 
 
 Pallet benchmarks are an integration-like benchmark test in that it tests a black box of the system due primarily to the fact that calls are generally database reads, network calls, and such.
 
-Tools used are usually the frame benchmarking suite [frame benchmarks](https://docs.substrate.io/rustdocs/latest/frame_benchmarking/macro.benchmarks.html)
+Tools used are usually the frame benchmarking suite [Frame benchmarks][substrate-frame-benchmarking].
 
 ## Within the network
 
@@ -56,7 +65,7 @@ What do we want from tools:
 - true
 - as code
 
-[Drill](https://github.com/fcsonline/drill) is an excellent piece of kit that will allow us to test the network without having hugely differing results since we are not using a garbage collected tool like Gatling or k6 and the like. Garbage collection is vital as we want the system to send the right amount of requests correctly.
+[Drill][drill-tool] is an excellent piece of kit that will allow us to test the network without having hugely differing results since we are not using a garbage collected tool like Gatling or k6 and the like. Garbage collection is vital as we want the system to send the right amount of requests correctly.
 
 ### Load testing
 
@@ -137,7 +146,7 @@ Users, or requests, refer to the number of concurrent requests made to the syste
 
 ### Latency
 
-Latency is how long it takes to get a response from the system. We generally use the [L99](https://en.wikipedia.org/wiki/99_percentile) and [L95](https://en.wikipedia.org/wiki/95_percentile) as common metrics.
+Latency is how long it takes to get a response from the system. We generally use the [L99][l99] and [L95][l95] as common metrics.
 
 ### System
 

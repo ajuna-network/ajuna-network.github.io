@@ -9,13 +9,14 @@ The main entrypoint (or homepage) is `index.md` and new pages must be referenced
 
 ### To test locally
 
-Making sure [Ruby](https://www.ruby-lang.org/en/documentation/installation/) and [Bundler](https://bundler.io/) are installed in your machine, run the following:
+Making sure [Ruby](https://www.ruby-lang.org/en/documentation/installation/) `2.7` and [Bundler](https://bundler.io/) are installed in your machine, run the following:
 
 ```sh
 git clone git@github.com:ajuna-network/ajuna-network.github.io.git
 cd ajuna-network.github.io
 
 bundle install
+bundle config set --local path 'vendor/bundle'
 bundle exec jekyll serve
 ```
 
@@ -28,3 +29,13 @@ If there are any issues regarding authentication, follow [this guide](https://je
 ```sh
 JEKYLL_GITHUB_TOKEN=<YOUR_PAT> bundle exec jekyll serve
 ```
+
+#### Versions
+
+See here: [Ruby versioning](https://talk.jekyllrb.com/t/error-no-implicit-conversion-of-hash-into-integer/5890)
+
+If you use rbenv, you can do:
+- `rbenv install`
+- `rbenv init`
+- `rbenv exec bundler install`
+- `JEKYLL_GITHUB_TOKEN=inserttoken rbenv exec bundle exec jekyll serve`
