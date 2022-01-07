@@ -53,6 +53,8 @@ There are many risks involved with data at rest:
 
 In general, the key to mitigating this risk is to ensure that everything is encrypted and unnecessary data is removed when it is no longer needed.
 
+The best-in-class solution for encrypting data at rest is to encrypt the entire drive using something like [LUKS][luks]. This is not always feasible so you can use something like [EcryptFS][ecryptfs] to encrypt individual folders/files. These tools are not exhaustive, there are variants in all operating systems.
+
 Some great tools:
 - [GPG][gpg]
 - [EcryptFS][ecryptfs]
