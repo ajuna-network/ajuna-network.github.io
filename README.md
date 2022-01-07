@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+# Welcome to Ajuna Network GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/ajuna-network/ajuna-network.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+The project has two folders worth mentioning:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- `assets/` - contains css styles and images
+- `docs/` - contains individual markdown pages to render
 
-### Markdown
+The main entrypoint (or homepage) is `index.md` and new pages must be referenced here.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### To test locally
 
-```markdown
-Syntax highlighted code block
+Making sure [Ruby](https://www.ruby-lang.org/en/documentation/installation/) and [Bundler](https://bundler.io/) are installed in your machine, run the following:
 
-# Header 1
-## Header 2
-### Header 3
+```sh
+git clone git@github.com:ajuna-network/ajuna-network.github.io.git
+cd ajuna-network.github.io
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+bundle install
+bundle exec jekyll serve
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+The default URL is http://127.0.0.1:4000/.
 
-### Jekyll Themes
+### Troubleshoot
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ajuna-network/ajuna-network.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+If there are any issues regarding authentication, follow [this guide](https://jekyll.github.io/github-metadata/authentication/#authentication) to create a personal access token for your GitHub account and use it to set `JEKYLL_GITHUB_TOKEN` environment variable.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```sh
+JEKYLL_GITHUB_TOKEN=<YOUR_PAT> bundle exec jekyll serve
+```

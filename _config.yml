@@ -1,3 +1,21 @@
-theme: jekyll-theme-minimal
-title: Ajuna Networks Creator Hub
-description: This site is the entry point for Creators building or integrating on top of Ajuna Network!
+title: Ajuna Network Creator Hub
+description: >-
+  Hey there 👋 Welcome to Ajuna Network, the ecosystem for gamers and creators.
+  This site is the entry point for all creators building or integrating on top
+  of Ajuna Network!
+
+logo: /assets/img/logo.png
+domain: ajuna-network.github.io
+url: https://ajuna-network.github.io
+baseurl: ""
+
+markdown: kramdown
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+github:
+  repository_url: https://github.com/ajuna-network
+  repository_nwo: "@ajuna-network"
+  owner_url: https://github.com/orgs/ajuna-network/people
+  owner_name: us
