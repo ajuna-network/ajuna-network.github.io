@@ -10,6 +10,7 @@ permalink: /guides/security
 [gpg]: https://www.gnupg.org/
 [data-at-rest]: https://en.wikipedia.org/wiki/Data_at_rest
 [data-in-transit]: https://en.wikipedia.org/wiki/Data_in_transit
+[pgp]: https://en.wikipedia.org/wiki/Pretty_Good_Privacy
 
 # Security Guidelines
 
@@ -72,6 +73,11 @@ Careful consideration should be taken about the data is sent across:
 A note on chat apps:
 
 While not generally insecure, chat apps still open an unnecessary risk of leaked data and open an attack vector of the respective companies' access to our data.
+
+Some tools that might aid secure messaging:
+- [pgp][pgp]
+
+For example, you might encrypt a pgp message and share your keys somewhere else, so that messages can be secured on the fly.
 
 ## Logging
 
