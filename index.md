@@ -12,4 +12,7 @@ Follow relevant guidelines below to get started with Ajuna Network.
   - [Prerequisite](/docs/development/prerequisite.md)
   - [General](/docs/development/general.md)
   - [Rust](/docs/development/rust.md)
+  - [Tools and Extensions](/docs/development/tools-and-extensions.md)
+- Security  
   - [Security](/docs/security/security.md)
+  
