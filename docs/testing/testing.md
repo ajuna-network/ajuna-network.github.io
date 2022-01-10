@@ -89,3 +89,28 @@ Acceptance tests could be:
 - Stakeholders
 
 Acceptance tests might also involve some exploratory manual testing.
+
+## Naming Conventions
+
+We have a general naming convention for our tests, it looks like this:
+
+```rust
+#[test]
+fn <function_name>_<does what>[_when_something_happens] { ... }
+
+eg,
+fn fn1_works { ... }
+fn fn1_returns_something { ... }
+fn fn1_panics_when_wrong_input_is_passed { ... }
+fn fn1_panics_when_wrong_input_is_passed { ... }
+```
+
+Or a real world example:
+
+```rust
+#[test]
+fn full_returns_true_when_board_is_full() {
+    let board: [[u8; 6]; 7] = [[PLAYER; 6]; 7];
+    assert!(Logic::full(board))
+}
+```
