@@ -27,6 +27,8 @@ Any level of familiarity with either of the subjects will be useful but is _not_
 
 To start developing on Ajuna Network, we recommend reading through our suggestions below.
 
+Also see [Tools and Extensions](tools-and-extensions.md) for more recommendations.
+
 ### Build Dependencies
 
 The main binary required to build our blockchain project is [OpenSSL][openssl].
