@@ -27,6 +27,7 @@ As a team, we do not enforce a password schema, but passwords should be as secur
 - different from other passwords
 - safe from external viewing
 - no obvious personal information like your name
+- never share passwords via Slack or Email
 
 ## Data
 
